@@ -1,4 +1,4 @@
-* ![alt text](https://st4.depositphotos.com/1594920/38712/i/950/depositphotos_387122742-stock-photo-large-group-many-wild-cats.jpg)
+![alt text](https://st4.depositphotos.com/1594920/38712/i/950/depositphotos_387122742-stock-photo-large-group-many-wild-cats.jpg)
 # Genes y cerebro: filogenia de los felinos
 Este estudio explora la evolución cerebral en felinos mediante análisis filogenéticos de genes relacionados con el desarrollo neurobiológico.
 *************** 
@@ -21,5 +21,7 @@ La evolución cerebral en felinos permite explorar vínculos entre genética y c
 [^1]:Finarelli, John A., y John J. Flynn. 2009. «Brain-size Evolution And Sociality In Carnivora». Proceedings Of The National Academy Of Sciences 106 (23): 9345-49. https://doi.org/10.1073/pnas.0901780106.
 
 [^2]:Sakai, Sharleen T., Bradley M. Arsznov, Ani E. Hristova, Elise J. Yoon, y Barbara L. Lundrigan. 2016. «Big Cat Coalitions: A Comparative Analysis Of Regional Brain Volumes In Felidae». Frontiers In Neuroanatomy 10 (octubre). https://doi.org/10.3389/fnana.2016.00099.
+************
 
-* ![alt text](https://images-provider.frontiersin.org/api/ipx/w=370&f=webp/https://www.frontiersin.org/files/Articles/222506/fnana-10-00099-HTML/image_m/fnana-10-00099-g004.jpg)
+
+![alt text](https://images-provider.frontiersin.org/api/ipx/w=370&f=webp/https://www.frontiersin.org/files/Articles/222506/fnana-10-00099-HTML/image_m/fnana-10-00099-g004.jpg)
