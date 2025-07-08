@@ -15,18 +15,22 @@ La evolución cerebral en felinos permite explorar vínculos entre genética y c
 * NCBI
 **************
 ## Cómo usar el programa
-* 1. Se escogieron los siguientes genes por estar directamente relacionados al desarrollo cerebral en los mamíferos: 
-    * Tbr1"
+1. Se escogieron los siguientes genes por estar directamente relacionados al desarrollo cerebral en los mamíferos: 
+    * Tbr1
     * Chd7
     * Hes6
     * NEUROG2
-* 2. El género Panthera cuenta con 5 especies, en esta ocasión trabajaremos con 7 especies pues las otras dos corresponden al género Neofelis el cuál será nuestro grupo externo. Debido a que las descargas de genes desde NCBI se pueden realizar a nivel de especie y no de género se creó el programa Descargar_genes.sh. Este es un archivo ejecutable que contiene lo siguiente:
- * Genes con su ID 
+2. El género Panthera cuenta con 5 especies, en esta ocasión trabajaremos con 7 especies pues las otras dos corresponden al género Neofelis el cuál será nuestro grupo externo. Debido a que las descargas de genes desde NCBI se pueden realizar a nivel de especie y no de género se creó el programa **Descargar_genes.sh, que se encuentra adjunto en los documentos de este proyecto.** Este es un archivo ejecutable que contiene lo siguiente:
+ 
+* Genes con su ID
+ 
 genes=(["Tbr1"]="10716"
 ["Chd7"]="79145"
 ["Hes6"]="55502"
 ["NEUROG2"]="63973")
+
 * Especies (5 género Panthera) (2 género Neofelis)
+
 species=("Panthera leo"
 "Panthera onca"
 "Panthera pardus"
@@ -34,7 +38,9 @@ species=("Panthera leo"
 "Panthera uncia"
 "Neofelis nebulosa"
 "Neofelis diardi")
+
 * Un loop para descargar los genes de cada especie
+
 for gene in "${!genes[@]}";do
  gene_id="${!genes[@gene]}"
  for sp in "${!species[@]}";do
