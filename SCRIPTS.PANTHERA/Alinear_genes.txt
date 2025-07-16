@@ -1,0 +1,32 @@
+Primero editamos en atom los genes descargados para conservar el nombre de la especie, del gen y GENEID
+el código de atom dependerá de cada caso por lo que los siguientes comando podrían ser útiles:
+\w= letras y _
+\d=números
+.=símbolos
+\w+ todo lo que sea letras y _
+
+Segundo: alineamos nuestros genes usando muscle 
+para eso usamos un loop
+es importante contar con muscle en la carpeta dodne se encuentren nuestros archivos 
+for genes in *.fna
+do
+  ./muscle3.8.31_i86linux64 -in "$genes" -out "${genes.fna}_aligned.fna" -maxiters 1 -diags
+done
+
+Tercero creamos árboles filogenetico para cada gen:
+module load iqtree/2.2.2.6
+for genes in muscle_*
+do
+iqtree2 -s $genes
+done
+
+Cuarto unimos los árboes en un documento:
+cat *.treefile > All.Trees.Panthera.tree
+
+Quinto creamos una variable en astral en la carpeta que estemos trabajando:
+astral=/u/scratch/d/dechavez/Bioinformatica-PUCE/RediseBio/KatAgui/Astral/astral.5.7.8.jar
+
+Sexto creamos el arbol concenso:
+java -jar $astral -i All.Trees.Panthera.tree -o Astral.Panthera.tree
+
+
