@@ -71,7 +71,7 @@ Ejecutamos un loop para crear todos los archivos .treefile de los genes alineado
   * Usamos nuestra variable astral con el archivo que contiene todos los .treefile para encontrar el árbol concenso:  
   $ java -jar $astral -i All.Trees.Panthera.tree -o Astral.Panthera.tree  
 #### 8. Podemos visualizar nuestro árbol filogenético en __FigTree__ donde podemos editarlo y tomar como grupo externo a la especie que escojimos _"Neofelis nebulosa"_.  
-![alt text](Imágenes/Astral.Panthera.tree.png)
+![alt text](Imágenes/Astral.Panthera.tree.jpg)
 
  
 ********************
