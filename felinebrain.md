@@ -49,14 +49,14 @@ La evolución cerebral en felinos permite explorar vínculos entre genética y c
  * Para ejecutar el documento se debe colocar en la terminal:  
    $ bash Descargar_genes.sh
 
-### 4. Ahora editamos en __Atom__ los genes descargados para conservar el nombre de la especie, del gen y GeneID
+#### 4. Ahora editamos en __Atom__ los genes descargados para conservar el nombre de la especie, del gen y GeneID
  ![alt text](Imágenes/Atom.png)
-### 5. Seguido a esto alineamos nuestras secuencias usando un loop. Es importante contar con __muscle__ en la carpeta donde se encuentren nuestros archivos.  
+#### 5. Seguido a esto alineamos nuestras secuencias usando un loop. Es importante contar con __muscle__ en la carpeta donde se encuentren nuestros archivos.  
   $ for genes in *.fna  
    \>do  
    \>./muscle3.8.31_i86linux64 -in "$genes" -out "$genes.fna.aligned.fna" -maxiters 1 -diags  
    \>done  
-### 6. Ya que contamos con nuestras secuencias alineadas podemos crear árboles filogenéticos para cada gen.  
+#### 6. Ya que contamos con nuestras secuencias alineadas podemos crear árboles filogenéticos para cada gen.  
 Por lo que usaremos __Iqtree__.  
   $ module load iqtree/2.2.2.6  
 Ejecutamos un loop para crear todos los archivos .treefile de los genes alineados.  
@@ -64,13 +64,13 @@ Ejecutamos un loop para crear todos los archivos .treefile de los genes alineado
    \>do  
    \>iqtree2 -s $genes  
    \>done  
-### 7. Finalmente crearemos nuestro árbol concenso con __Astral__.  
+#### 7. Finalmente crearemos nuestro árbol concenso con __Astral__.  
   $ cat *.treefile > All.Trees.Panthera.tree _(unir los archivos .treefile en un solo archivo .tree)_  
   * Crear variable de ASTRAL  
   $ astral=/_(Ruta del archivo)_/Astral/astral.5.7.8.jar  
   * Usamos nuestra variable astral con el archivo que contiene todos los .treefile para encontrar el árbol concenso:  
   $ java -jar $astral -i All.Trees.Panthera.tree -o Astral.Panthera.tree  
-### 8. Podemos visualizar nuestro árbol filogenético en __FigTree__ donde podemos editarlo y tomar como grupo externo a la especie que escojimos _"Neofelis nebulosa"_.  
+#### 8. Podemos visualizar nuestro árbol filogenético en __FigTree__ donde podemos editarlo y tomar como grupo externo a la especie que escojimos _"Neofelis nebulosa"_.  
 ![alt text](Imágenes/Astral.Panthera.tree.png)
 
  
